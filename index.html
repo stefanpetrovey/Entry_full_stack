@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vestel Task 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            padding: var(--Spacing-3xl, 24px);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--Spacing-3xl, 24px);
+            align-self: stretch;
+            background: white;
+            font-family: Bahnschrift;
+            width: 650px;
+        }
+
+        .container-up {
+            border-top: 2px solid orange;
+            border-left: 2px solid gray;
+            border-right: 2px solid gray;
+        }
+
+        .container-down {
+            border-top: 2px solid lightgray;
+            border-bottom: 2px solid gray;
+            border-left: 2px solid gray;
+            border-right: 2px solid gray;
+            padding: 10px;
+
+        }
+
+        .modal-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid orange;
+            color: orange;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 14px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-back {
+            background: white;
+            border: 2px solid gray;
+        }
+
+        .btn-continue {
+            background: #d9534f;
+            color: white;
+            border: none;
+        }
+
+        .btn-back:hover {
+            background: white;
+            border: 2px solid gray;
+        }
+
+        .btn-continue:hover {
+            background: #d9534f;
+            color: white;
+            border: none;
+        }
+
+
+        .info {
+            background-color: #eaeaea;
+            padding: 10px;
+        }
+        .info span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .second-part {
+            color: gray;
+        }
+
+        .second-part > * {
+            margin-bottom: 24px;
+        }
+
+        .btn-close {
+            float: right;
+        }
+
+        h4 {
+            margin-top: 24px;
+        }
+
+        .btn {
+            width: 130px;
+        }
+
+        .second-icon {
+            width: 22px;
+            height: 22px;
+            border: 2px solid gray;
+            color: gray;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .second-to-first{
+            border-top: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="second-to-first">
+    <div class="container container-up">
+
+        <div class="first-part">
+            <div class="heading">
+                <div class="modal-icon">!</div>
+                <h4 class=""><b>Upload</b> Other Documents</h4>
+            </div>
+        </div>
+
+        <div class="second-part">
+            <p>To upload more documents to the current request, please initiate a new service request.</p>
+            <p>Do you want to start a new service request to upload more documents?</p>
+            <div class="info">
+                <span><div class="second-icon">i</div></span>
+                <span class="text-span"><b>A service fee of 520 will apply.</b></span>
+                <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="container container-down">
+        <div class="buttons">
+            <button class="btn btn-back">BACK</button>
+            <button class="btn btn-continue">CONTINUE</button>
+        </div>
+
+    </div>
+</div>
+<script>
+    const closeBtn = document.querySelector('.info .btn-close');
+
+    closeBtn.addEventListener('click', () => {
+        closeBtn.parentElement.style.display = 'none';
+    });
+</script>
+</body>
+</html>
